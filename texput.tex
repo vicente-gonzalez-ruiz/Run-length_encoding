@@ -3,8 +3,8 @@
 %%% TeX-master: "<none>"
 %%% End:
 
-\title{\href{https://en.wikipedia.org/wiki/Run-length_encoding}{Run-length
-encoding}{Run-length encoding}}
+\title{\href{https://en.wikipedia.org/wiki/Run-length_encoding}{Run-length encoding}}
+
 \author{Vicente González Ruiz}
 
 \maketitle
@@ -24,7 +24,7 @@ aaaaa = 5a
   proposed.
 \end{itemize}
 
-\section{\(N\)-ary run length encoding}}
+\section{$N$-ary run length encoding}
 
 RLE for \(N\)-ary alphabets (alphabets of size \(N\)), where typically,
 \(N=256\).
@@ -32,19 +32,13 @@ RLE for \(N\)-ary alphabets (alphabets of size \(N\)), where typically,
 \subsection{Encoder}
 
 \begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item While there are symbols to encode:
-
-  \begin{enumerate}
-  \def\labelenumii{\arabic{enumii}.}
   \tightlist
-  \item
-    Let \(s\) the next symbol.
-  \item
-    Read the next \(n\) consecutive symbols equal to \(s\).
-  \item
-    Write the pair \(ns\).
+  \begin{enumerate}
+  \tightlist
+  \item Let \(s\) the next symbol.
+  \item Read the next \(n\) consecutive symbols equal to \(s\).
+  \item Write the pair \(ns\).
   \end{enumerate}
 \end{enumerate}
 
@@ -65,13 +59,11 @@ are encoded as:
 \subsection{Decoder}
 
 \begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item While there are \(ns\) pairs to decode:
-
-  \begin{enumerate}
-  \def\labelenumii{\arabic{enumii}.}
   \tightlist
+\item While there are \(ns\) pairs to decode:
+  \tightlist
+  \begin{enumerate}
+    \tightlist
   \item Write \(n\)-times the symbol \(s\).
   \end{enumerate}
 \end{enumerate}
@@ -91,15 +83,13 @@ are encoded as:
 \subsection{Encoder}
 
 \begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
   Let \(s\leftarrow\) \texttt{0}.
 \item
   While there are bits to encode:
-
+  \tightlist
   \begin{enumerate}
-  \def\labelenumii{\arabic{enumii}.}
   \tightlist
   \item
     Read the next \(n\) consecutive bits equal to \(s\).
@@ -110,8 +100,7 @@ are encoded as:
   \end{enumerate}
 \end{enumerate}
 
-    \hypertarget{example}{%
-\subsubsection{Example}\label{example}}
+\subsection{Example}
 
 Runs:
 
@@ -128,20 +117,14 @@ are encoded as:
 \subsection{Decoder}
 
 \begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
 \tightlist
-\item
-  Let \(s\leftarrow\) \texttt{0}.
-\item
-  While there are items \(n\) to decode:
-
-  \begin{enumerate}
-  \def\labelenumii{\arabic{enumii}.}
+\item Let \(s\leftarrow\) \texttt{0}.
+\item While there are items \(n\) to decode:
   \tightlist
-  \item
-    Write \(n\) bits equal to \(s\).
-  \item
-    \(s\leftarrow (s+1)~\text{modulus}~2\).
+  \begin{enumerate}
+  \tightlist
+  \item Write \(n\) bits equal to \(s\).
+  \item \(s\leftarrow (s+1)~\text{modulus}~2\).
   \end{enumerate}
 \end{enumerate}
 
@@ -149,8 +132,7 @@ are encoded as:
 
 \begin{itemize}
 \tightlist
-\item
-  Created by
+\item Created by
   \href{https://en.wikipedia.org/wiki/Microcom_Networking_Protocol}{Microcom
   Inc.} for the
   \href{https://scholar.google.es/scholar?hl=es\&as_sdt=0\%2C5\&q=held+data+compression+techniques+applications\&btnG=}{MNP
@@ -171,8 +153,7 @@ aaaaab    aaa2b
 a^nb      aaa(n-3)b
 \end{verbatim}
 
-    \hypertarget{example}{%
-\subsubsection{Example}\label{example}}
+\subsection{Example}
 
 Runs:
 
@@ -186,5 +167,5 @@ are encoded as:
 aaa1bbb2aaa3bbb4ccc3b
 \end{verbatim}
 
-\subsubsection{Lab: MPN-5}
+\subsection{Lab: MPN-5}
 \href{https://nbviewer.jupyter.org/github/vicente-gonzalez-ruiz/Run-length_encoding/blob/master/MPN-5.ipynb}{IPython notebook}
