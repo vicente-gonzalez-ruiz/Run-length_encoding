@@ -1,0 +1,190 @@
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "<none>"
+%%% End:
+
+\title{\href{https://en.wikipedia.org/wiki/Run-length_encoding}{Run-length
+encoding}{Run-length encoding}}
+\author{Vicente González Ruiz}
+
+\maketitle
+
+\section{Idea}
+
+\begin{itemize}
+\item RLE (Run Length Encoding) is a technique that removes the data
+  redundancy produced by the repetition of symbols. Example:
+
+\begin{verbatim}
+aaaaa = 5a
+\end{verbatim}
+
+\item Depending on the length of the source alphabet and the maximal
+  length of the run, different versions of RLE codecs have been
+  proposed.
+\end{itemize}
+
+\section{\(N\)-ary run length encoding}}
+
+RLE for \(N\)-ary alphabets (alphabets of size \(N\)), where typically,
+\(N=256\).
+
+\subsection{Encoder}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item While there are symbols to encode:
+
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \tightlist
+  \item
+    Let \(s\) the next symbol.
+  \item
+    Read the next \(n\) consecutive symbols equal to \(s\).
+  \item
+    Write the pair \(ns\).
+  \end{enumerate}
+\end{enumerate}
+
+\subsection{Example}
+
+Runs:
+
+\begin{verbatim}
+aaaabbbbbaaaaaabbbbbbbcccccc
+\end{verbatim}
+
+are encoded as:
+
+\begin{verbatim}
+4a5b6a7b6c
+\end{verbatim}
+
+\subsection{Decoder}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item While there are \(ns\) pairs to decode:
+
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \tightlist
+  \item Write \(n\)-times the symbol \(s\).
+  \end{enumerate}
+\end{enumerate}
+
+\subsection{Lab: basic RLE}
+\href{https://nbviewer.jupyter.org/github/vicente-gonzalez-ruiz/Run-length_encoding/blob/master/RLE.ipynb}{IPython notebook}
+
+\section{Binary run length encoding}
+
+\begin{itemize}
+  \tightlist
+\item In binary RLE is not necessary to indicate the next symbol (only the
+  length) because when a run ends, only the other (possible) symbol will
+  start with the next run.
+\end{itemize}
+
+\subsection{Encoder}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Let \(s\leftarrow\) \texttt{0}.
+\item
+  While there are bits to encode:
+
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \tightlist
+  \item
+    Read the next \(n\) consecutive bits equal to \(s\).
+  \item
+    Write \(n\).
+  \item
+    \(s\leftarrow (s+1)~\text{modulus}~2\).
+  \end{enumerate}
+\end{enumerate}
+
+    \hypertarget{example}{%
+\subsubsection{Example}\label{example}}
+
+Runs:
+
+\begin{verbatim}
+0000111110000001111111000000
+\end{verbatim}
+
+are encoded as:
+
+\begin{verbatim}
+4 5 6 7 6
+\end{verbatim}
+
+\subsection{Decoder}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Let \(s\leftarrow\) \texttt{0}.
+\item
+  While there are items \(n\) to decode:
+
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \tightlist
+  \item
+    Write \(n\) bits equal to \(s\).
+  \item
+    \(s\leftarrow (s+1)~\text{modulus}~2\).
+  \end{enumerate}
+\end{enumerate}
+
+\section{\href{https://en.wikipedia.org/wiki/Microcom_Networking_Protocol\#MNP_5}{MPN-5 run length encoding}}
+
+\begin{itemize}
+\tightlist
+\item
+  Created by
+  \href{https://en.wikipedia.org/wiki/Microcom_Networking_Protocol}{Microcom
+  Inc.} for the
+  \href{https://scholar.google.es/scholar?hl=es\&as_sdt=0\%2C5\&q=held+data+compression+techniques+applications\&btnG=}{MNP
+  (Microcom Networking Protocol) 5}.
+\end{itemize}
+
+\subsection{Codec}
+
+\begin{verbatim}
+Input     Output
+--------- ---------
+ab        ab
+aab       aab
+aaab      aaa0b /* 3-symbols length run == <ESC> code-word */
+aaaab     aaa1b
+aaaaab    aaa2b
+:         :
+a^nb      aaa(n-3)b
+\end{verbatim}
+
+    \hypertarget{example}{%
+\subsubsection{Example}\label{example}}
+
+Runs:
+
+\begin{verbatim}
+aaaabbbbbaaaaaabbbbbbbccccccb
+\end{verbatim}
+
+are encoded as:
+
+\begin{verbatim}
+aaa1bbb2aaa3bbb4ccc3b
+\end{verbatim}
+
+\subsubsection{Lab: MPN-5}
+\href{https://nbviewer.jupyter.org/github/vicente-gonzalez-ruiz/Run-length_encoding/blob/master/MPN-5.ipynb}{IPython notebook}
