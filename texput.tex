@@ -3,7 +3,7 @@
 %%% TeX-master: "<none>"
 %%% End:
 
-\title{\href{https://en.wikipedia.org/wiki/Run-length_encoding}{Run-length encoding}}
+\title{Run-length encoding}
 
 \author{Vicente González Ruiz}
 
@@ -12,8 +12,7 @@
 \section{Idea}
 
 \begin{itemize}
-\item RLE (Run Length Encoding) is a technique that removes the data
-  redundancy produced by the repetition of symbols. Example:
+\item \href{https://en.wikipedia.org/wiki/Run-length_encoding}{RLE (Run Length Encoding)} is a technique that removes the data redundancy produced by the repetition of symbols. Example:
 
 \begin{verbatim}
 aaaaa = 5a
@@ -134,9 +133,7 @@ are encoded as:
 \tightlist
 \item Created by
   \href{https://en.wikipedia.org/wiki/Microcom_Networking_Protocol}{Microcom
-  Inc.} for the
-  \href{https://scholar.google.es/scholar?hl=es\&as_sdt=0\%2C5\&q=held+data+compression+techniques+applications\&btnG=}{MNP
-  (Microcom Networking Protocol) 5}.
+  Inc.} for the MNP-5 (Microcom Networking Protocol)~\cite{held1991data}.
 \end{itemize}
 
 \subsection{Codec}
@@ -169,3 +166,5 @@ aaa1bbb2aaa3bbb4ccc3b
 
 \subsection{Lab: MPN-5}
 \href{https://nbviewer.jupyter.org/github/vicente-gonzalez-ruiz/Run-length_encoding/blob/master/MPN-5.ipynb}{IPython notebook}
+
+\bibliography{text-compression}

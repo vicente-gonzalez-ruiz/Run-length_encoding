@@ -20,8 +20,7 @@ src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLor
 
                                                                   
 
-<h2 class="titleHead"><a 
-href="https://en.wikipedia.org/wiki/Run-length_encoding" >Run-length encoding</a></h2>
+<h2 class="titleHead">Run-length encoding</h2>
  <div class="author" ><span 
 class="ecrm-1200">Vicente Gonz</span><span 
 class="ecrm-1200">á</span><span 
@@ -42,11 +41,14 @@ run length encoding</a></span>
 href="#x1-70003" id="QQ2-1-7">Binary run length encoding</a></span>
 <br />   <span class="sectionToc" >4 <a 
 href="#x1-110004" id="QQ2-1-11">MPN-5 run length encoding</a></span>
+<br />   <span class="likesectionToc" ><a 
+href="#x1-150004.3" id="QQ2-1-15">References</a></span>
    </div>
    <h3 class="sectionHead"><span class="titlemark">1   </span> <a 
  id="x1-10001"></a>Idea</h3>
      <ul class="itemize1">
-     <li class="itemize">RLE  (Run  Length  Encoding)  is  a  technique  that  removes  the  data
+     <li class="itemize"><a 
+href="https://en.wikipedia.org/wiki/Run-length_encoding" >RLE  (Run  Length  Encoding)</a>  is  a  technique  that  removes  the  data
      redundancy produced by the repetition of symbols. Example:
                                                                   
 
@@ -54,45 +56,45 @@ href="#x1-110004" id="QQ2-1-11">MPN-5 run length encoding</a></span>
      <div class="verbatim" id="verbatim-1">
      aaaaa = 5a
 </div>
-     <!--l. 20--><p class="nopar" >
+     <!--l. 19--><p class="nopar" >
      </p></li>
      <li class="itemize">Depending on the length of the source alphabet and the maximal length of the
      run, diﬀerent versions of RLE codecs have been proposed.</li></ul>
-<!--l. 27--><p class="noindent" >
+<!--l. 26--><p class="noindent" >
 </p>
    <h3 class="sectionHead"><span class="titlemark">2   </span> <a 
- id="x1-20002"></a><!--l. 27--><math 
+ id="x1-20002"></a><!--l. 26--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mi 
 >N</mi></math>-ary
 run length encoding</h3>
-<!--l. 29--><p class="noindent" >RLE for <!--l. 29--><math 
+<!--l. 28--><p class="noindent" >RLE for <!--l. 28--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
 >N</mi></mrow></math>-ary alphabets
-(alphabets of size <!--l. 29--><math 
+(alphabets of size <!--l. 28--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
 >N</mi></mrow></math>),
-where typically, <!--l. 30--><math 
+where typically, <!--l. 29--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
 >N</mi> <mo 
 class="MathClass-rel">=</mo> <mn>2</mn><mn>5</mn><mn>6</mn></mrow></math>.
-</p><!--l. 32--><p class="noindent" >
+</p><!--l. 31--><p class="noindent" >
 </p>
    <h4 class="subsectionHead"><span class="titlemark">2.1   </span> <a 
  id="x1-30002.1"></a>Encoder</h4>
-<!--l. 34--><p class="noindent" >
+<!--l. 33--><p class="noindent" >
      </p><ol  class="enumerate1" >
      <li 
   class="enumerate" id="x1-3002x1">While there are symbols to encode:
          <ol  class="enumerate2" >
          <li 
-  class="enumerate" id="x1-3004x1">Let <!--l. 39--><math 
+  class="enumerate" id="x1-3004x1">Let <!--l. 38--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
@@ -100,30 +102,30 @@ display="inline" ><mrow
          the next symbol.
          </li>
          <li 
-  class="enumerate" id="x1-3006x2">Read the next <!--l. 40--><math 
+  class="enumerate" id="x1-3006x2">Read the next <!--l. 39--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
 >n</mi></mrow></math>
-         consecutive symbols equal to <!--l. 40--><math 
+         consecutive symbols equal to <!--l. 39--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
 >s</mi></mrow></math>.
          </li>
          <li 
-  class="enumerate" id="x1-3008x3">Write the pair <!--l. 41--><math 
+  class="enumerate" id="x1-3008x3">Write the pair <!--l. 40--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
 >n</mi><mi 
 >s</mi></mrow></math>.</li></ol>
      </li></ol>
-<!--l. 45--><p class="noindent" >
+<!--l. 44--><p class="noindent" >
 </p>
    <h4 class="subsectionHead"><span class="titlemark">2.2   </span> <a 
  id="x1-40002.2"></a>Example</h4>
-<!--l. 47--><p class="noindent" >Runs:
+<!--l. 46--><p class="noindent" >Runs:
                                                                   
 
                                                                   
@@ -131,8 +133,8 @@ display="inline" ><mrow
    <div class="verbatim" id="verbatim-2">
 aaaabbbbbaaaaaabbbbbbbcccccc
 </div>
-<!--l. 51--><p class="nopar" >
-</p><!--l. 53--><p class="indent" >   are encoded as:
+<!--l. 50--><p class="nopar" >
+</p><!--l. 52--><p class="indent" >   are encoded as:
                                                                   
 
                                                                   
@@ -140,15 +142,15 @@ aaaabbbbbaaaaaabbbbbbbcccccc
    <div class="verbatim" id="verbatim-3">
 4a5b6a7b6c
 </div>
-<!--l. 57--><p class="nopar" >
-</p><!--l. 59--><p class="noindent" >
+<!--l. 56--><p class="nopar" >
+</p><!--l. 58--><p class="noindent" >
 </p>
    <h4 class="subsectionHead"><span class="titlemark">2.3   </span> <a 
  id="x1-50002.3"></a>Decoder</h4>
-<!--l. 61--><p class="noindent" >
+<!--l. 60--><p class="noindent" >
      </p><ol  class="enumerate1" >
      <li 
-  class="enumerate" id="x1-5002x1">While there are <!--l. 63--><math 
+  class="enumerate" id="x1-5002x1">While there are <!--l. 62--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
@@ -157,24 +159,24 @@ display="inline" ><mrow
      pairs to decode:
          <ol  class="enumerate2" >
          <li 
-  class="enumerate" id="x1-5004x1">Write <!--l. 67--><math 
+  class="enumerate" id="x1-5004x1">Write <!--l. 66--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
 >n</mi></mrow></math>-times
-         the symbol <!--l. 67--><math 
+         the symbol <!--l. 66--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
 >s</mi></mrow></math>.</li></ol>
      </li></ol>
-<!--l. 71--><p class="noindent" >
+<!--l. 70--><p class="noindent" >
 </p>
    <h4 class="subsectionHead"><span class="titlemark">2.4   </span> <a 
  id="x1-60002.4"></a>Lab: basic RLE</h4>
-<!--l. 72--><p class="noindent" ><a 
+<!--l. 71--><p class="noindent" ><a 
 href="https://nbviewer.jupyter.org/github/vicente-gonzalez-ruiz/Run-length_encoding/blob/master/RLE.ipynb" >IPython notebook</a>
-</p><!--l. 74--><p class="noindent" >
+</p><!--l. 73--><p class="noindent" >
 </p>
    <h3 class="sectionHead"><span class="titlemark">3   </span> <a 
  id="x1-70003"></a>Binary run length encoding</h3>
@@ -185,14 +187,14 @@ href="https://nbviewer.jupyter.org/github/vicente-gonzalez-ruiz/Run-length_encod
                                                                   
 
                                                                   
-<!--l. 83--><p class="noindent" >
+<!--l. 82--><p class="noindent" >
 </p>
    <h4 class="subsectionHead"><span class="titlemark">3.1   </span> <a 
  id="x1-80003.1"></a>Encoder</h4>
-<!--l. 85--><p class="noindent" >
+<!--l. 84--><p class="noindent" >
      </p><ol  class="enumerate1" >
      <li 
-  class="enumerate" id="x1-8002x1">Let <!--l. 88--><math 
+  class="enumerate" id="x1-8002x1">Let <!--l. 87--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
@@ -205,26 +207,26 @@ class="ectt-1000">0</span>.
   class="enumerate" id="x1-8004x2">While there are bits to encode:
          <ol  class="enumerate2" >
          <li 
-  class="enumerate" id="x1-8006x1">Read the next <!--l. 95--><math 
+  class="enumerate" id="x1-8006x1">Read the next <!--l. 94--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
 >n</mi></mrow></math>
-         consecutive bits equal to <!--l. 95--><math 
+         consecutive bits equal to <!--l. 94--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
 >s</mi></mrow></math>.
          </li>
          <li 
-  class="enumerate" id="x1-8008x2">Write <!--l. 97--><math 
+  class="enumerate" id="x1-8008x2">Write <!--l. 96--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
 >n</mi></mrow></math>.
          </li>
          <li 
-  class="enumerate" id="x1-8010x3"><!--l. 99--><math 
+  class="enumerate" id="x1-8010x3"><!--l. 98--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
@@ -236,11 +238,11 @@ class="MathClass-bin">+</mo> <mn>1</mn></mrow><mo
 class="MathClass-close">)</mo></mrow><mspace width="1em" class="nbsp" /><mstyle 
 class="text"><mtext  >modulus</mtext></mstyle><mspace width="1em" class="nbsp" /><mn>2</mn></mrow></math>.</li></ol>
      </li></ol>
-<!--l. 103--><p class="noindent" >
+<!--l. 102--><p class="noindent" >
 </p>
    <h4 class="subsectionHead"><span class="titlemark">3.2   </span> <a 
  id="x1-90003.2"></a>Example</h4>
-<!--l. 105--><p class="noindent" >Runs:
+<!--l. 104--><p class="noindent" >Runs:
                                                                   
 
                                                                   
@@ -248,8 +250,8 @@ class="text"><mtext  >modulus</mtext></mstyle><mspace width="1em" class="nbsp" /
    <div class="verbatim" id="verbatim-4">
 0000111110000001111111000000
 </div>
-<!--l. 109--><p class="nopar" >
-</p><!--l. 111--><p class="indent" >   are encoded as:
+<!--l. 108--><p class="nopar" >
+</p><!--l. 110--><p class="indent" >   are encoded as:
                                                                   
 
                                                                   
@@ -257,15 +259,15 @@ class="text"><mtext  >modulus</mtext></mstyle><mspace width="1em" class="nbsp" /
    <div class="verbatim" id="verbatim-5">
 4 5 6 7 6
 </div>
-<!--l. 115--><p class="nopar" >
-</p><!--l. 117--><p class="noindent" >
+<!--l. 114--><p class="nopar" >
+</p><!--l. 116--><p class="noindent" >
 </p>
    <h4 class="subsectionHead"><span class="titlemark">3.3   </span> <a 
  id="x1-100003.3"></a>Decoder</h4>
-<!--l. 119--><p class="noindent" >
+<!--l. 118--><p class="noindent" >
      </p><ol  class="enumerate1" >
      <li 
-  class="enumerate" id="x1-10002x1">Let <!--l. 121--><math 
+  class="enumerate" id="x1-10002x1">Let <!--l. 120--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
@@ -275,7 +277,7 @@ class="MathClass-rel">←</mo></mrow></math>
 class="ectt-1000">0</span>.
      </li>
      <li 
-  class="enumerate" id="x1-10004x2">While there are items <!--l. 122--><math 
+  class="enumerate" id="x1-10004x2">While there are items <!--l. 121--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
@@ -283,19 +285,19 @@ display="inline" ><mrow
      to decode:
          <ol  class="enumerate2" >
          <li 
-  class="enumerate" id="x1-10006x1">Write <!--l. 126--><math 
+  class="enumerate" id="x1-10006x1">Write <!--l. 125--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
 >n</mi></mrow></math>
-         bits equal to <!--l. 126--><math 
+         bits equal to <!--l. 125--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
 >s</mi></mrow></math>.
          </li>
          <li 
-  class="enumerate" id="x1-10008x2"><!--l. 127--><math 
+  class="enumerate" id="x1-10008x2"><!--l. 126--><math 
  xmlns="http://www.w3.org/1998/Math/MathML"  
 display="inline" ><mrow 
 ><mi 
@@ -307,17 +309,17 @@ class="MathClass-bin">+</mo> <mn>1</mn></mrow><mo
 class="MathClass-close">)</mo></mrow><mspace width="1em" class="nbsp" /><mstyle 
 class="text"><mtext  >modulus</mtext></mstyle><mspace width="1em" class="nbsp" /><mn>2</mn></mrow></math>.</li></ol>
      </li></ol>
-<!--l. 131--><p class="noindent" >
+<!--l. 130--><p class="noindent" >
 </p>
    <h3 class="sectionHead"><span class="titlemark">4   </span> <a 
  id="x1-110004"></a><a 
 href="https://en.wikipedia.org/wiki/Microcom_Networking_Protocol#MNP_5" >MPN-5 run length encoding</a></h3>
      <ul class="itemize1">
-     <li class="itemize">Created by <a 
-href="https://en.wikipedia.org/wiki/Microcom_Networking_Protocol" >Microcom Inc.</a> for the <a 
-href="https://scholar.google.es/scholar?hl=es&as_sdt=0%2C5&q=held+data+compression+techniques+applications&btnG=" >MNP (Microcom Networking Protocol)
-     5</a>.</li></ul>
-<!--l. 142--><p class="noindent" >
+     <li class="itemize">Created  by  <a 
+href="https://en.wikipedia.org/wiki/Microcom_Networking_Protocol" >Microcom  Inc.</a>  for  the  MNP-5  (Microcom  Networking
+     Protocol) <span class="cite">[<a 
+href="#Xheld1991data">1</a>]</span>.</li></ul>
+<!--l. 139--><p class="noindent" >
 </p>
    <h4 class="subsectionHead"><span class="titlemark">4.1   </span> <a 
  id="x1-120004.1"></a>Codec</h4>
@@ -335,12 +337,12 @@ Input     Output
  <br />:         :
  <br />a^nb      aaa(n-3)b
 </div>
-<!--l. 154--><p class="nopar" >
-</p><!--l. 156--><p class="noindent" >
+<!--l. 151--><p class="nopar" >
+</p><!--l. 153--><p class="noindent" >
 </p>
    <h4 class="subsectionHead"><span class="titlemark">4.2   </span> <a 
  id="x1-130004.2"></a>Example</h4>
-<!--l. 158--><p class="noindent" >Runs:
+<!--l. 155--><p class="noindent" >Runs:
                                                                   
 
                                                                   
@@ -348,8 +350,8 @@ Input     Output
    <div class="verbatim" id="verbatim-7">
 aaaabbbbbaaaaaabbbbbbbccccccb
 </div>
-<!--l. 162--><p class="nopar" >
-</p><!--l. 164--><p class="indent" >   are encoded as:
+<!--l. 159--><p class="nopar" >
+</p><!--l. 161--><p class="indent" >   are encoded as:
                                                                   
 
                                                                   
@@ -357,14 +359,29 @@ aaaabbbbbaaaaaabbbbbbbccccccb
    <div class="verbatim" id="verbatim-8">
 aaa1bbb2aaa3bbb4ccc3b
 </div>
-<!--l. 168--><p class="nopar" >
-</p><!--l. 170--><p class="noindent" >
+<!--l. 165--><p class="nopar" >
+</p><!--l. 167--><p class="noindent" >
 </p>
    <h4 class="subsectionHead"><span class="titlemark">4.3   </span> <a 
  id="x1-140004.3"></a>Lab: MPN-5</h4>
-<!--l. 171--><p class="noindent" ><a 
+<!--l. 168--><p class="noindent" ><a 
 href="https://nbviewer.jupyter.org/github/vicente-gonzalez-ruiz/Run-length_encoding/blob/master/MPN-5.ipynb" >IPython notebook</a>
+</p><!--l. 1--><p class="noindent" >
 </p>
+   <h3 class="likesectionHead"><a 
+ id="x1-150004.3"></a>References</h3>
+<!--l. 1--><p class="noindent" >
+   </p><div class="thebibliography">
+   <p class="bibitem" ><span class="biblabel">
+ [1]<span class="bibsp">   </span></span><a 
+ id="Xheld1991data"></a>Gilbert Held and Thomas Marshall.  <a 
+href="https://scholar.google.es/scholar?hl=es&as_sdt=0%2C5&q=held+data+compression+techniques+applications&btnG=" ><span 
+class="ecti-1000">Data compression; techniques and</span>
+   <span 
+class="ecti-1000">applications: Hardware and software considerations</span></a>.  John Wiley &#x0026; Sons,
+   Inc., 1991.
+</p>
+   </div>
     
 </body> 
 </html>
